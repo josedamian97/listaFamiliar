@@ -2,5 +2,15 @@
   "db": {
     "name": "db",
     "connector": "memory"
+  },
+  "aplicacionMYSQL": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "",
+    "database": "listaFamiliar",
+    "password": "alumno",
+    "name": "aplicacionMYSQL",
+    "user": "root",
+    "connector": "mysql"
   }
 }

@@ -34,5 +34,17 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "Usuario": {
+    "dataSource": "aplicacionMYSQL",
+    "public": true
+  },
+  "ListaFamiliar": {
+    "dataSource": "aplicacionMYSQL",
+    "public": true
+  },
+  "Producto": {
+    "dataSource": "aplicacionMYSQL",
+    "public": true
   }
 }
