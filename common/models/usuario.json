@@ -15,7 +15,23 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "miembros": {
+      "type": "belongsTo",
+      "model": "ListaFamiliar",
+      "foreignKey": ""
+    },
+    "hasone": {
+      "type": "hasOne",
+      "model": "ListaFamiliar",
+      "foreignKey": ""
+    },
+    "hasnadbelongstomany": {
+      "type": "hasAndBelongsToMany",
+      "model": "ListaFamiliar",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {}
 }
