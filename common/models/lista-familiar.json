@@ -9,9 +9,6 @@
     "nombre": {
       "type": "string",
       "required": true
-    },
-    "owner": {
-      "type": "number"
     }
   },
   "validations": [],
@@ -24,12 +21,12 @@
     "productos": {
       "type": "hasMany",
       "model": "Producto",
-      "foreignKey": ""
+      "foreignKey": "listafamiliarId"
     },
-    "hasone": {
+    "usuario": {
       "type": "belongsTo",
       "model": "Usuario",
-      "foreignKey": ""
+      "foreignKey": "owner"
     },
     "hasandbelongstomany": {
       "type": "hasAndBelongsToMany",
