@@ -35,5 +35,34 @@
     }
   },
   "acls": [],
-  "methods": {}
+  "methods": {
+    "prototype.solicitar": {
+      "accepts": [
+        {
+          "arg": "contexto",
+          "type": "object",
+          "required": true,
+          "description": "el objeto",
+          "http": {
+            "source": "context"
+          }
+        }
+      ],
+      "returns": [
+        {
+          "arg": "solicitudexplorer",
+          "type": "object",
+          "root": true,
+          "description": "el objeto del explorer"
+        }
+      ],
+      "description": "solicitud del usuario para pertenecer a una listafamiliar",
+      "http": [
+        {
+          "path": "/solicitar",
+          "verb": "post"
+        }
+      ]
+    }
+  }
 }

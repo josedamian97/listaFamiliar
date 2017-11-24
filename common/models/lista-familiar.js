@@ -15,4 +15,25 @@ module.exports = function(Listafamiliar) {
             });        
         });                  
     });
+    
+
+/**
+ * solicitud del usuario para pertenecer a una listafamiliar
+ * @param {object} contexto el objeto
+ * @param {Function(Error, object)} callback
+ */
+
+Listafamiliar.prototype.solicitar = function(contexto, callback) {
+  var solicitudexplorer;
+  var these=this.id;
+  var usuario=contexto.req.accessToken.userId;
+  this.hasandbelongstomany.add(usuario, function(err) {
+      solicitudexplorer={
+          usuarioId:usuario,
+          listaFamiliarId:these
+      };
+      callback(null, solicitudexplorer);
+});
+};
+
 };
