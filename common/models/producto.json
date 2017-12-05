@@ -20,7 +20,7 @@
     "productos": {
       "type": "belongsTo",
       "model": "ListaFamiliar",
-      "foreignKey": ""
+      "foreignKey": "listafamiliarId"
     }
   },
   "acls": [],
@@ -49,6 +49,34 @@
       "http": [
         {
           "path": "/limpiarLista",
+          "verb": "put"
+        }
+      ]
+    },
+    "prototype.comprado": {
+      "accepts": [
+        {
+          "arg": "contexto",
+          "type": "object",
+          "required": true,
+          "description": "el morcillon",
+          "http": {
+            "source": "context"
+          }
+        }
+      ],
+      "returns": [
+        {
+          "arg": "array",
+          "type": "array",
+          "root": true,
+          "description": "el array de todos los productos del la lista familiar del usuario auntenticado"
+        }
+      ],
+      "description": "si es true lo ponemos false y viceversa de un id de producto",
+      "http": [
+        {
+          "path": "/producto",
           "verb": "put"
         }
       ]
